@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Generics1CSharp.Services
 {
-    internal class PrintService
+    internal class PrintService<T>
     {
-        public int[] Values { get; private set; } = new int[10];
+        public T[] Values { get; private set; } = new T[10];
         public int Count { get;private set; } = 0;
-        public void AddValue(int value)
+        public void AddValue(T value)
         {
             if(Count == 10)
             {
@@ -18,7 +18,7 @@ namespace Generics1CSharp.Services
             Values[Count] = value;
             Count++;
         }
-        public int First()
+        public T First()
         {
             if(Count == 0)
             {

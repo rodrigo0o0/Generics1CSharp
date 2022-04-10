@@ -10,7 +10,7 @@ namespace Generics1CSharp
     {
         static void Main(string[] args)
         {
-            PrintService printService = new PrintService();
+            PrintService<int> printService = new PrintService<int>();
             Console.Write("How many values? ");
             int values = int.Parse(Console.ReadLine());
             for (int i = 0; i < values; i++)
